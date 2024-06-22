@@ -31,7 +31,7 @@ impl From<CustomError> for ProgramError {
     }
 }
 
-// the contract's state
+//  the contract's state
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct ContractState {
     pub contract_owner: Pubkey,
@@ -46,7 +46,7 @@ impl IsInitialized for ContractState {
     }
 }
 
-// the mint permission structure
+//  the mint permission structure
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct MintPermission {
     pub user: Pubkey,
@@ -54,7 +54,7 @@ pub struct MintPermission {
     pub token_uri: String,
 }
 
-// the instruction types
+//  the instruction types
 pub enum ContractInstruction {
     InitializeContract {
         owner: Pubkey,
@@ -322,4 +322,43 @@ fn burn(program_id: &Pubkey, accounts: &[AccountInfo], token_id: u64) -> Program
     )?;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use solana_program::{
+        instruction::{AccountMeta, Instruction},
+        program_pack::Pack,
+        rent::Rent,
+        sysvar,
+    };
+    use std::convert::TryInto;
+
+    #[test]
+    fn test_initialize_contract() {
+        //  your test case for initialize_contract function
+    }
+
+    #[test]
+    fn test_grant_mint() {
+        //  your test case for grant_mint function
+    }
+
+    #[test]
+    fn test_mint() {
+        //  your test case for mint function
+    }
+
+    #[test]
+    fn test_transfer() {
+        //  your test case for transfer function
+    }
+
+    #[test]
+    fn test_burn() {
+        //  your test case for burn function
+    }
+
+    // Add more tests as needed
 }
