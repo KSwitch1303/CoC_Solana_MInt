@@ -335,30 +335,5 @@ mod tests {
     };
     use std::convert::TryInto;
 
-    #[test]
-    fn test_initialize_contract() {
-        //  your test case for initialize_contract function
-    }
 
-    #[test]
-    fn test_grant_mint() {
-        //  your test case for grant_mint function
-    }
-
-    #[test]
-    fn test_mint() {
-        //  your test case for mint function
-    }
-
-    #[test]
-    fn test_transfer() {
-        //  your test case for transfer function
-    }
-
-    #[test]
-    fn test_burn() {
-        //  your test case for burn function
-    }
-
-    // Add more tests as needed
 }
