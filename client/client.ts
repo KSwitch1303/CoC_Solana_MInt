@@ -17,7 +17,7 @@ const connection = new web3.Connection("https://api.devnet.solana.com", "confirm
 const wallet = { keypair: web3.Keypair.generate() };
 
 
-// Define the structure of the contract state
+// the structure of the contract state
 class ContractState {
   contractOwner: PublicKey;
   lastTokenId: number;
@@ -37,7 +37,7 @@ class ContractState {
   }
 }
 
-// Define the structure of the mint permission
+// the structure of the mint permission
 class MintPermission {
   user: PublicKey;
   gameId: string;
@@ -87,10 +87,6 @@ const MintPermissionSchema = new Map([
     },
   ],
 ]);
-
-const PROGRAM_ID = new PublicKey(
-  "DRGtxC9Z1pmxgA6a4G9kQxivATjGGQ3CQWKNAfUhwUPU"
-);
 
 async function main() {
   const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
